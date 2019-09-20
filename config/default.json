@@ -1,0 +1,6 @@
+{
+  "jwtPrivateKey": "unsecureKey",
+  "db": "mongodb://localhost/davedb",
+  "port": "3911",
+  "requiresAuth": false
+}

@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "1234",
+  "mongoURI": "mongodb+srv://oavkdtv123:oavkdtv123@fakedavedb-qppco.mongodb.net/test?retryWrites=true&w=majority"
+}
