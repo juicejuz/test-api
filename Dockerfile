@@ -85,6 +85,6 @@ EXPOSE 3900
 ENV NODE_PORT=3900
 ## be sure curl is avalable in ct
 HEALTHCHECK --interval=30s --timeout=3s \
-  CMD curl -f http://localhost/healthz || exit 1
+  CMD curl -f http://localhost:3900/healthz || exit 1
 COPY --chown=node:node . .  
 CMD ["node", "app.js"]
