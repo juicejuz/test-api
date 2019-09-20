@@ -25,6 +25,7 @@ services:
     ## Build a custom image from Dockerfile
     build:
       context: .
+      dockerfile: compile.dockerfile
       ## Choose a target which environment to deploy
       # target: dev
       # target: test
