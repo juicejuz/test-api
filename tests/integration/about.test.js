@@ -13,4 +13,9 @@
  * limitations under the License.
  */
 
-const request = require('supertest');
+// const request = require('supertest');
+describe('canary test', () => {
+  it('should not fail', () => {
+    expect(true).toBe(true);
+  });
+});
