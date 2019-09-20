@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                sh 'npm run test:ci' 
+                sh 'npm run preprod' 
             }
         }
     }
