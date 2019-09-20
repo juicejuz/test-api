@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'oavkdtv/centos-node:1.0.0' 
-            args '-p 3555:3000' 
+            args '-p 3555:3900' 
         }
     }
     environment {
@@ -31,5 +31,5 @@ node {
     stage 'deploy'
         /*sh 'docker stack deploy -c docker-compose.yml davedb-app'*/
         /*sh 'docker service create --name davedb-app --network davedb_network --publish 3555:3000 --replicas=1 --constraint "node.role == manager" davedb-app-test'*/
-        sh 'docker run -it -d --name dave-app -p 3555:3000 davedb-app-test'
+        sh 'docker run -it -d --name dave-app -p 3555:3900 davedb-app-test'
 }
