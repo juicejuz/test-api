@@ -24,13 +24,13 @@ services:
     image: davedb-app-test
     ## Build a custom image from Dockerfile
     # build:
-      # context: .
-      # dockerfile: compile.dockerfile
-      ## Choose a target which environment to deploy
-      # target: dev
-      # target: test
-      # target: preprod
-      target: prod
+    # context: .
+    # dockerfile: compile.dockerfile
+    ## Choose a target which environment to deploy
+    # target: dev
+    # target: test
+    # target: preprod
+    # target: prod
     ## User for dev environments with nodemon
     # command: /node/app/node_modules/.bin/nodemon ./bin/www
     ports:
