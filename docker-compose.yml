@@ -39,7 +39,7 @@ services:
       # - '3901:3901' ## preprod
       - '3900:3900' ## prod
     # command: nodemon --inspect=0.0.0.0:9229 app.js
-    networks: 
+    networks:
       - network
     environment:
       ## DEV Environments
@@ -55,14 +55,13 @@ services:
       - NODE_PORT=3900
       ## ADDR Global for all
       # - NODE_ADDR=0.0.0.0
-    volumnes:
-      # - ./api/:/node/api
-      ## handle OSx/Win missmatch in nodemodules by bindMount files
-      # - /node/api/node_modules ## creates an empty modules folder
-  
+    # volumnes:
+    # - ./api/:/node/api
+    ## handle OSx/Win missmatch in nodemodules by bindMount files
+    # - /node/api/node_modules ## creates an empty modules folder
+
   ## WebApp Frontend Application
 
 networks:
   network:
-
-volumes:
+# volumes:
