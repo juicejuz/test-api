@@ -25,7 +25,7 @@ pipeline {
 }
 node {
     stage 'Checkout'
-        git url: 'https://github.com/juicejuz/tes-api.git'
+        git url: 'https://github.com/juicejuz/test-api.git'
     stage 'Build Docker'
         docker.build('davedb-app-test --build-arg HTTPS_PROXY=http://10.252.64.33:8080 --build-arg HTTP_PROXY=http://10.252.64.33:8080')
     stage 'deploy'
