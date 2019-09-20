@@ -31,5 +31,5 @@ node {
     stage 'deploy'
         /*sh 'docker stack deploy -c docker-compose.yml davedb-app'*/
         /*sh 'docker service create --name davedb-app --network davedb_network --publish 3555:3000 --replicas=1 --constraint "node.role == manager" davedb-app-test'*/
-        sh 'docker run -it -d --name dave-app -p 3555:3900 davedb-app-test'
+        sh 'docker stack deploy -c docker-compose.yml davedb-app'
 }
