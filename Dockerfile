@@ -11,7 +11,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM oavkdtv/centos-node:1.0.0 as base
+FROM oavkdtv/centos-node:1.0.0
 ARG CREATED_DATE=not-set
 ARG SOURCE_COMMIT=not-set
 LABEL org.opencontainers.image.authors=oavkdtv@gmail.com
