@@ -52,7 +52,8 @@ services:
       # - NODE_ENV=preprod
       # - NODE_PORT=3901
       ## Prod Environments
-      - NODE_ENV=prod
+      #- NODE_ENV=prod
+      - NODE_ENV=development
       - NODE_PORT=3900
       ## ADDR Global for all
       # - NODE_ADDR=0.0.0.0
