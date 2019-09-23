@@ -10,59 +10,19 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 
-## Version 3.x for Prod Orches...
 version: '3.7'
-
-## Version 2.3+ > 3.x for dev
-#version '2.4'
 
 services:
   ## main Node.js API Application
   api:
-    # init: true
-    ## get a specific Image
     image: davedb-app-test
-    ## Build a custom image from Dockerfile
-    # build:
-    # context: .
-    # dockerfile: compile.dockerfile
-    ## Choose a target which environment to deploy
-    # target: dev
-    # target: test
-    # target: preprod
-    # target: prod
-    ## User for dev environments with nodemon
-    # command: /node/app/node_modules/.bin/nodemon ./bin/www
     ports:
-      ## Port depend on image build
-      # - '3911:3911' ## dev
-      # - '9229:9229' ## nodemon inspect port
-      # - '3901:3901' ## preprod
-      - '3900:3900' ## prod
-    # command: nodemon --inspect=0.0.0.0:9229 app.js
+      - '3900:3900'
     networks:
       - network
     environment:
-      ## DEV Environments
-      # - NODEENV=dev
-      # - NODE_PORT=3911
-      ## Test Environment
-      # - NODE_ENV=test
-      ## PreProd Environments
-      # - NODE_ENV=preprod
-      # - NODE_PORT=3901
-      ## Prod Environments
-      - NODE_ENV=prod
+      - NODE_ENV=production
       - NODE_PORT=3900
-      ## ADDR Global for all
-      # - NODE_ADDR=0.0.0.0
-    # volumnes:
-    # - ./api/:/node/api
-    ## handle OSx/Win missmatch in nodemodules by bindMount files
-    # - /node/api/node_modules ## creates an empty modules folder
-
-  ## WebApp Frontend Application
 
 networks:
   network:
-# volumes:
